@@ -24,9 +24,10 @@ proto_register_toolchains()
 
 go_repository(
     name = "io_k8s_client_go",
+    #tag = "v4.0.0",
+    commit = "HEAD",
     #commit = "72e1c2a1ef30b3f8da039e92d4a6a1f079f374e8",
     importpath = "k8s.io/client-go",
-    tag = "v4.0.0",
 )
 
 # WORKAROUND:
@@ -41,11 +42,12 @@ http_archive(
 go_repository(
     name = "io_k8s_apimachinery",
     importpath = "k8s.io/apimachinery",
-    strip_prefix = "apimachinery-d2536e3e90fd52c9ebc06c63c8ee44c2d2ef16fd",
+    strip_prefix = "apimachinery-c3862e5c4788be03d209390fef869f2a36302b46",
     # WORKAROUND:
     # Remove proto import of "k8s.io/apimachinery/pkg/util/intstr/generated.proto" from
     #  pkg/runtime/schema/generated.proto
-    urls = ["https://github.com/nictuku/apimachinery/archive/d2536e3e90fd52c9ebc06c63c8ee44c2d2ef16fd.tar.gz"],
+    #  pkg/apis/meta/v1/generated.proto
+    urls = ["https://github.com/nictuku/apimachinery/archive/c3862e5c4788be03d209390fef869f2a36302b46.tar.gz"],
 )
 
 go_repository(
@@ -64,4 +66,88 @@ go_repository(
     name = "com_github_go_openapi_spec",
     commit = "a4fa9574c7aa73b2fc54e251eb9524d0482bb592",
     importpath = "github.com/go-openapi/spec",
+)
+
+go_repository(
+    name = "com_github_go_openapi_spec",
+    commit = "a4fa9574c7aa73b2fc54e251eb9524d0482bb592",
+    importpath = "github.com/go-openapi/spec",
+)
+
+go_repository(
+    name = "com_github_juju_ratelimit",
+    commit = "59fac5042749a5afb9af70e813da1dd5474f0167",
+    importpath = "github.com/juju/ratelimit",
+)
+
+go_repository(
+    name = "in_gopkg_inf_v0",
+    commit = "3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4",
+    importpath = "gopkg.in/inf.v0",
+)
+
+go_repository(
+    name = "com_github_go_openapi_jsonpointer",
+    commit = "779f45308c19820f1a69e9a4cd965f496e0da10f",
+    importpath = "github.com/go-openapi/jsonpointer",
+)
+
+go_repository(
+    name = "com_github_go_openapi_swag",
+    commit = "cf0bdb963811675a4d7e74901cefc7411a1df939",
+    importpath = "github.com/go-openapi/swag",
+)
+
+go_repository(
+    name = "com_github_emicklei_go_restful",
+    commit = "2dd44038f0b95ae693b266c5f87593b5d2fdd78d",
+    importpath = "github.com/emicklei/go-restful",
+)
+
+go_repository(
+    name = "com_github_spf13_pflag",
+    commit = "4c012f6dcd9546820e378d0bdda4d8fc772cdfea",
+    importpath = "github.com/spf13/pflag",
+)
+
+go_repository(
+    name = "com_github_go_openapi_jsonreference",
+    commit = "36d33bfe519efae5632669801b180bf1a245da3b",
+    importpath = "github.com/go-openapi/jsonreference",
+)
+
+go_repository(
+    name = "com_github_PuerkitoBio_purell",
+    commit = "1c4bec281e4bbc75b4f4a1bd923bdf1bd989a969",
+    importpath = "github.com/PuerkitoBio/purell",
+)
+
+go_repository(
+    name = "in_gopkg_yaml_v2",
+    commit = "287cf08546ab5e7e37d55a84f7ed3fd1db036de5",
+    importpath = "gopkg.in/yaml.v2",
+)
+
+go_repository(
+    name = "com_github_mailru_easyjson",
+    commit = "32fa128f234d041f196a9f3e0fea5ac9772c08e1",
+    importpath = "github.com/mailru/easyjson",
+)
+
+go_repository(
+    name = "com_github_PuerkitoBio_urlesc",
+    commit = "de5bf2ad457846296e2031421a34e2568e304e35",
+    importpath = "github.com/PuerkitoBio/urlesc",
+)
+
+go_repository(
+    name = "io_k8s_api",
+    commit = "218912509d74a117d05a718bb926d0948e531c20",
+    importpath = "k8s.io/api",
+)
+
+go_repository(
+    name = "com_github_gregjones_httpcache",
+    commit = "2bcd89a1743fd4b373f7370ce8ddc14dfbd18229",
+    importpath = "github.com/gregjones/httpcache",
 )
