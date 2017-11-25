@@ -142,12 +142,26 @@ go_repository(
 
 go_repository(
     name = "io_k8s_api",
-    commit = "218912509d74a117d05a718bb926d0948e531c20",
+    #commit = "218912509d74a117d05a718bb926d0948e531c20",
     importpath = "k8s.io/api",
+    strip_prefix = "api-657c6563f026725f4421bfde2b04e7bc494dff21",
+    urls = ["https://github.com/nictuku/api/archive/657c6563f026725f4421bfde2b04e7bc494dff21.tar.gz"],
 )
 
 go_repository(
     name = "com_github_gregjones_httpcache",
     commit = "2bcd89a1743fd4b373f7370ce8ddc14dfbd18229",
     importpath = "github.com/gregjones/httpcache",
+)
+
+go_repository(
+    name = "com_github_peterbourgon_diskv",
+    commit = "2973218375c3d13162e1d3afe1708aaee318ef3f",
+    importpath = "github.com/peterbourgon/diskv",
+)
+
+go_repository(
+    name = "io_k8s_apiextensions_apiserver",
+    commit = "51a1910459f074162eb4e25233e461fe91e99405",
+    importpath = "k8s.io/apiextensions-apiserver",
 )
