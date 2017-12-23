@@ -14,7 +14,7 @@ Normally Bazel-friendly repositories wouldn't shipt their own WORKSPACE files, b
 ## How to build
 
 1. Install [Bazel.build](https://bazel.build)
-2. Run `$ bazel build :moby-bazel-go-example`
+2. Run `$ bazel build :kubernetes
 
 The first build will take a very long time because all remote dependencies have to be fetched and build. But repeated builds should be very fast.
 
